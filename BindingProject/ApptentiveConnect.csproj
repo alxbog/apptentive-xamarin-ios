@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1DBB74DF-F843-4F40-9106-19AF77A9E4E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ApptentiveConnect</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>ApptentiveConnect</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\ApptentiveResources.bundle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libApptentiveConnect.linkwith.cs">
+      <DependentUpon>libApptentiveConnect.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATAboutApptentiveView.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel v1 to v2.cdm" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel v2 to v3.cdm" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel v3 to v4.cdm" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInteractionUpgradeMessageViewController.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageCenterV7ViewController.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageInputView.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessagePanelNewUIViewController.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTaskProgressCell.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\Info.plist" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATAutomatedMessageCell.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATAutomatedMessageCell.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATAutomatedMessageCell.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATAutomatedMessageCellV7.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATAutomatedMessageCellV7.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel.momd\ATDataModel 2.mom" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel.momd\ATDataModel 3.mom" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel.momd\ATDataModel 4.mom" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel.momd\ATDataModel 4.omo" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel.momd\ATDataModel.mom" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATDataModel.momd\VersionInfo.plist" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATFileMessageCell.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATFileMessageCell.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATFileMessageCell.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATFileMessageUserCellV7.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATFileMessageUserCellV7.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInfoViewController.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInfoViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInfoViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInfoViewController_iPad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInfoViewController_iPad.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATInfoViewController_iPad.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATLongMessageViewController.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATLongMessageViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATLongMessageViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageCenterViewController.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageCenterViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageCenterViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageInputViewV7.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageInputViewV7.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessageInputViewV7.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessagePanelViewController.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessagePanelViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATMessagePanelViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATPersonDetailsViewController.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATPersonDetailsViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATPersonDetailsViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATSimpleImageViewController.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATSimpleImageViewController.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATSimpleImageViewController.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageDevCellV7.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageDevCellV7.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageUserCell.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageUserCell.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageUserCell.nib\runtime.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageUserCellV7.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ATTextMessageUserCellV7.nib\objects.nib" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ar.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\da.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\de.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\el.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\es-ES.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\es.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\fr-CA.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\fr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_apptentive_icon_small.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_apptentive_icon_small%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_apptentive_logo.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_apptentive_logo%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_button_shadow_overlay.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_button_shadow_overlay%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_camera_button_v7.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_camera_button_v7%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_cancel_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_cancel_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_cancel_highlighted_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_cancel_highlighted_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_chat_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_chat_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_chat_bubble.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_chat_bubble%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_checkmark.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_checkmark%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_composing_bubble.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_composing_bubble%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_contact_button_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_contact_button_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_dev_chat_bubble.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_dev_chat_bubble%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_dialog_paper_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_dialog_paper_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_flat_input_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_flat_input_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_gray_line.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_gray_line%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_logo_info.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_logo_info%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_file_default.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_file_default%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_text_compose_ellipsis.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_text_compose_ellipsis%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_user_icon.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_user_icon%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_user_icon_default.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_mc_user_icon_default%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_message_blue_line.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_message_blue_line%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_message_toolbar_shadow.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_message_toolbar_shadow%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_plus_button_flat.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_plus_button_flat%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_button_flat.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_button_flat%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_disabled_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_disabled_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_highlighted_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_send_highlighted_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_icon_mask.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_icon_mask%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_icon_shadow.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_icon_shadow%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_logo.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_logo%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_update_logo%403x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_user_button_image.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_user_button_image%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_user_button_image_landscape.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_user_button_image_landscape%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_white_button_bg.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\generated\at_white_button_bg%402x.png" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\it.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ja.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ko.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\nl.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\pt-BR.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\pt.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\sv.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\tr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ApptentiveResources.bundle\zh.lproj\Localizable.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libApptentiveConnect.a" />
+  </ItemGroup>
+</Project>
