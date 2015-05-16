@@ -1,0 +1,3 @@
+[submodule "XCodeProject/apptentive-ios"]
+	path = XCodeProject/apptentive-ios
+	url = https://github.com/apptentive/apptentive-ios.git
