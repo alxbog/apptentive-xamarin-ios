@@ -1,10 +1,10 @@
-# Mixpanel bindings for Xamarin (Monotouch)
+# Apptentive bindings for Xamarin (Monotouch)
 
-[MixPanel](https://mixpanel.com/) is an advanced analytics platform for mobile & web.
+[Apptentive](https://apptentive.com/) allows you to power native in-app surveys, ratings prompts, reviews, and messaging with Apptentive’s software kit. It’s the mobile CRM solution that earns customer love and retention..
 
 This project provides bindings for using in [Xamarin](https://xamarin.com) iOS projects.
 
-Current Mixpanel version: **2.7.3**
+Current Apptentive version: **1.7.3**
 
 ## How to build?
 
